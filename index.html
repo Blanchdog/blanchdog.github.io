@@ -7,10 +7,9 @@
 </head>
 <body>
     <div id="calculator">
-    <input type="text" id="playerNameInput" placeholder="Enter player name">
-    <button id="savePlayerNameButton">Save</button>
+    <input type="text" id="playerNameInput" class="player-name-input" placeholder="Enter player name">
     <!-- Rest of your calculator content -->
-</div>
+	</div>
 <script>
     // Retrieve player name from localStorage and set it as the input's value
     const playerNameInput = document.getElementById('playerNameInput');
@@ -19,19 +18,19 @@
         playerNameInput.value = savedPlayerName;
     }
     
-    // Save player name to localStorage when the "Save" button is clicked
-    const savePlayerNameButton = document.getElementById('savePlayerNameButton');
-    savePlayerNameButton.addEventListener('click', () => {
+    // Save player name to localStorage when the input loses focus (blur event)
+    playerNameInput.addEventListener('blur', () => {
         const newPlayerName = playerNameInput.value;
         localStorage.setItem('playerName', newPlayerName);
     });
-    
-    // Handle pressing Enter in the input field to save the player name
-    playerNameInput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            savePlayerNameButton.click(); // Simulate a click on the "Save" button
-        }
-    });
 </script>
+<style>
+    /* Add your CSS styles here */
+    .player-name-input {
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: none;
+    }
+</style>
 </body>
 </html>
