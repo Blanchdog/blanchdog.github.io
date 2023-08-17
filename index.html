@@ -8,17 +8,13 @@
 </head>
 <body>
     <div id="calculator">
-        <!-- Profession Section -->
-        <div class="section">
-            <div class="subheader" style="width: 150px;">Profession</div>
-            <input type="text" class="input-field" style="width: 258px;" placeholder="Enter your profession">
+        <!-- Profession and Player Section on the Same Line -->
+        <div class="section" style="display: flex;">
+            <div class="subheader" style="flex: 1; width:150px">Profession</div>
+            <input type="text" class="input-field" style="flex: 2; width: 258px" placeholder="Enter your profession">
             <hr class="line">
-        </div>
-        
-        <!-- Player Section -->
-        <div class="section">
-            <div class="subheader" style="width: 150px;">Player</div>
-            <input type="text" class="input-field" style="width: 258px;" placeholder="Enter player name">
+            <div class="subheader" style="flex: 1; width: 150px">Player</div>
+            <input type="text" class="input-field" style="flex: 2; width: 258px" placeholder="Enter player name">
         </div>
 
         <!-- Rest of your calculator content -->
@@ -26,3 +22,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
