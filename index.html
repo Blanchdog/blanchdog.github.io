@@ -6,6 +6,32 @@
     <title>Cashflow 301</title>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <div id="calculator">
+    <input type="text" id="playerNameInput" placeholder="Enter player name">
+    <button id="savePlayerNameButton">Save</button>
+    <!-- Rest of your calculator content -->
+</div>
+<script>
+    // Retrieve player name from localStorage and set it as the input's value
+    const playerNameInput = document.getElementById('playerNameInput');
+    const savedPlayerName = localStorage.getItem('playerName');
+    if (savedPlayerName) {
+        playerNameInput.value = savedPlayerName;
+    }
+    
+    // Save player name to localStorage when the "Save" button is clicked
+    const savePlayerNameButton = document.getElementById('savePlayerNameButton');
+    savePlayerNameButton.addEventListener('click', () => {
+        const newPlayerName = playerNameInput.value;
+        localStorage.setItem('playerName', newPlayerName);
+    });
+    
+    // Handle pressing Enter in the input field to save the player name
+    playerNameInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            savePlayerNameButton.click(); // Simulate a click on the "Save" button
+        }
+    });
+</script>
 </body>
 </html>
