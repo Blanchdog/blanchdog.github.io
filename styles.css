@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Header Style */
+.header {
+    font-size: 20pt;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Subheader Style */
+.subheader {
+    font-size: 16pt;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    padding: 5px 10px;
+    height: 20pt;
+    /* Adjustable width */
+}
+
+/* Label Style */
+.label {
+    font-size: 12pt;
+    display: block;
+    margin-bottom: 5px;
+}

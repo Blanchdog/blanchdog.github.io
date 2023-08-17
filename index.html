@@ -4,33 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashflow 301</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="calculator">
-    <input type="text" id="playerNameInput" class="player-name-input" placeholder="Enter player name">
-    <!-- Rest of your calculator content -->
-	</div>
-<script>
-    // Retrieve player name from localStorage and set it as the input's value
-    const playerNameInput = document.getElementById('playerNameInput');
-    const savedPlayerName = localStorage.getItem('playerName');
-    if (savedPlayerName) {
-        playerNameInput.value = savedPlayerName;
-    }
-    
-    // Save player name to localStorage when the input loses focus (blur event)
-    playerNameInput.addEventListener('blur', () => {
-        const newPlayerName = playerNameInput.value;
-        localStorage.setItem('playerName', newPlayerName);
-    });
-</script>
-<style>
-    /* Add your CSS styles here */
-    .player-name-input {
-        border: none;
-        border-bottom: 1px solid #000;
-        outline: none;
-    }
-</style>
+        <!-- Profession Section -->
+        <div class="section">
+            <div class="subheader">Profession</div>
+            <input type="text" class="input-field" style="width: 100%;" placeholder="Enter your profession">
+            <hr class="line">
+        </div>
+        
+        <!-- Player Section -->
+        <div class="section">
+            <div class="subheader">Player</div>
+            <input type="text" class="input-field" style="width: 100%;" placeholder="Enter player name">
+        </div>
+
+        <!-- Rest of your calculator content -->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
